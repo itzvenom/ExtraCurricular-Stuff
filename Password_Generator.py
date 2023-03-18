@@ -55,7 +55,7 @@ passwordgenerator()
 #ask if user would like to generate a new password otherwise quit program
 answer = input("Would you like to generate a new password?\n").casefold()
 if answer == "y".casefold() or answer == "yes".casefold():
-  maximumlen = int(input("Enter another password lenght? (Bigger than 12 characters)"))
+  maximumlen = int(input("Enter another password lenght? (Longer than 12 characters)"))
   passwordgenerator()
 else:
   quit()
