@@ -41,7 +41,7 @@ def passwordgenerator():
 
   new_pass = random.shuffle(password)
   new_pass = ("".join(password))
-#check if maximum len is bigger than lenght of new_pass variable and then add more characters if needed
+#check if maximum len is longer than lenght of new_pass variable and then add more characters if needed
   if maximumlen > len(new_pass):
     for x in range(maximumlen-len(new_pass)):
      new_pass = new_pass + secrets.choice(rand_digit + rand_upper + rand_lower + rand_symbol)
@@ -55,7 +55,7 @@ passwordgenerator()
 #ask if user would like to generate a new password otherwise quit program
 answer = input("Would you like to generate a new password?\n").casefold()
 if answer == "y".casefold() or answer == "yes".casefold():
-  maximumlen = int(input("Enter another password lenght? (Longer than 12 characters)"))
+  maximumlen = int(input("Enter another password lenght: (Longer than 12 characters)"))
   passwordgenerator()
 else:
   quit()
